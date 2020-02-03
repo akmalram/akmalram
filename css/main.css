@@ -106,20 +106,21 @@ nav .nav-menu .list .link:hover::before {
   width: 100%;
 }
 
-nav .nav-contacts {
-  position: fixed;
-  left: 10%;
-  bottom: 10vh;
-  z-index: 121;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-}
-
-nav .nav-contacts.active {
-  visibility: visible;
-  opacity: 1;
+@media screen and (max-width: 768px) {
+  nav .nav-contacts {
+    position: fixed;
+    left: 10%;
+    bottom: 10vh;
+    z-index: 121;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  nav .nav-contacts.active {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 nav .nav-contacts .insta a {

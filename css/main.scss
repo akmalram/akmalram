@@ -88,18 +88,20 @@ nav {
     }
 
     .nav-contacts {
-        position: fixed;
-        left: 10%;
-        bottom: 10vh;
-        z-index: 121;
+        @include sm-block {
+            position: fixed;
+            left: 10%;
+            bottom: 10vh;
+            z-index: 121;
 
-        visibility: hidden;
-        opacity: 0;
-        transition: all .5s ease;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s ease;
 
-        &.active {
-            visibility: visible;
-            opacity: 1;
+            &.active {
+                visibility: visible;
+                opacity: 1;
+            }
         }
 
         .insta {
