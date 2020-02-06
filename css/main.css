@@ -2,14 +2,26 @@ nav .nav-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 15px 0;
   position: relative;
+}
+
+nav .nav-container {
+  width: 1200px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 576px) {
+  nav .nav-container {
+    max-width: 98%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -180,8 +192,8 @@ nav .toggle-btn path {
   --offset: -38;
   stroke-dasharray: var(--length) var(--total-length);
   stroke-dashoffset: var(--offset);
-  -webkit-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 nav .toggle-btn circle {
@@ -223,5 +235,109 @@ nav .toggle-btn .menu input:checked + svg .line--3 {
 
 nav .toggle-btn .menu input:checked + svg .line--2 {
   --offset: -50;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    padding-top: 50px;
+  }
+}
+
+.hello {
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hello .row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hello .photo,
+.hello .content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+}
+
+@media screen and (max-width: 768px) {
+  .hello .photo,
+  .hello .content {
+    width: calc(66.66667% - 30px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hello .photo,
+  .hello .content {
+    width: calc(100% - 30px);
+  }
+}
+
+.hello .photo {
+  text-align: center;
+}
+
+.hello .photo img {
+  width: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .hello .photo img {
+    width: 100%;
+  }
+}
+
+.hello .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hello .content {
+    margin-top: 40px;
+  }
+}
+
+.hello .content .page-title {
+  font-size: 50px;
+  margin-bottom: 0px;
+  font-family: 'Kalam', cursive;
+}
+
+@media screen and (max-width: 768px) {
+  .hello .content .page-title {
+    text-align: center;
+  }
+}
+
+.hello .content .specs {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -20,6 +20,13 @@ ready(() => {
     MenuClassToggler();
 });
 
+ready(() => {
+    if(window.navigator.getBattery) {
+        const my = window.navigator.getBattery();
+        my.then(data => console.log(data));
+    }
+})
+
 
 // const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
 // const fontAwesomeBrandsObserver = new FontFaceObserver('Font Awesome 5 Brands');

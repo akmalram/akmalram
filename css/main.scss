@@ -5,12 +5,23 @@
 nav {
     .nav-inner {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 15px 0;
         position: relative;
     }
+
+    .nav-container {
+        width: 1200px;
+        max-width: 95%;
+        margin: 0 auto;
+        @include xs-block {
+            max-width: 98%;
+        }
+    }
+
     .nav-menu {
+
         @include sm-block {
             position: fixed;
             top: 0;
@@ -158,7 +169,7 @@ nav {
             --offset: -38;
             stroke-dasharray: var(--length) var(--total-length);
             stroke-dashoffset: var(--offset);
-            transition: all .8s cubic-bezier(.645, .045, .355, 1);
+            transition: all .5s cubic-bezier(.645, .045, .355, 1);
         }
 
         circle {
@@ -200,6 +211,74 @@ nav {
 
         .menu input:checked+svg .line--2 {
             --offset: -50;
+        }
+    }
+}
+
+main {
+    @include sm-block {
+        padding-top: 70px;
+    }
+
+    @include xs-block {
+        padding-top: 50px;
+    }
+}
+
+.hello {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .row {
+        justify-content: space-around;
+    }
+
+    .photo,
+    .content {
+        @include col();
+        @include size(12);
+        @include size-sm(16);
+        @include size-xs(24);
+    }
+
+    .photo {
+        text-align: center;
+
+        img {
+            width: 350px;
+        }
+
+        @include sm-block {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include sm-block {
+            margin-top: 40px;            
+        }
+
+        .page-title {
+            font-size: 50px;
+            margin-bottom: 0px;
+            font-family: 'Kalam', cursive;
+
+            @include sm-block {
+                text-align: center;
+            }
+        }
+
+        .specs {
+            font-size: 24px;
+            margin-bottom: 20px;
         }
     }
 }
