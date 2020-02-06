@@ -267,10 +267,6 @@ nav .toggle-btn .menu input:checked + svg .line--2 {
   --offset: -50;
 }
 
-main {
-  min-height: 400vh;
-}
-
 @media screen and (max-width: 768px) {
   main {
     padding-top: 70px;
