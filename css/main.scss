@@ -30,7 +30,7 @@ nav {
             right: 0;
             width: 100%;
             height: 100vh;
-            background-color: #0000006b;
+            background-color: #0000008f;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -193,6 +193,10 @@ nav {
             opacity: 1;
         }
 
+        .cross input:checked+svg path {
+            stroke: #fff;
+        }
+
         .cross input:checked+svg .line--1,
         .cross input:checked+svg .line--3 {
             --length: 22.627416998;
@@ -235,6 +239,8 @@ main {
     @include xs-block {
         padding-top: 50px;
     }
+
+    min-height: 400vh;
 }
 
 .hello {
