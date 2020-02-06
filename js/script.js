@@ -25,7 +25,8 @@ ready(() => {
         const my = window.navigator.getBattery();
         my.then(data => console.log(data));
     }
-})
+});
+
 
 
 // const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
