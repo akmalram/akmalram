@@ -45,6 +45,10 @@ nav {
             }
         }
 
+        &.active .list .item {
+            transform: translateX(0);
+        }
+
         .list {
             display: flex;
 
@@ -56,10 +60,18 @@ nav {
 
         .list .item {
             margin-right: 10px;
+            transition: transform .3s ease;
+
+            @for $i from 1 through 3 {
+                &:nth-of-type(#{$i}) {
+                    transition-delay: #{40 * $i}ms;
+                }
+            }
 
             @include sm-block {
                 margin-right: 0;
                 margin-bottom: 10px;
+                transform: translateX(-40px);
             }
         }
 
