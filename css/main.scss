@@ -3,6 +3,11 @@
 @import './colors';
 
 nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
     .nav-inner {
         display: flex;
         justify-content: space-between;
@@ -130,6 +135,8 @@ nav {
         .insta {
             a {
                 color: #111;
+                display: inline-flex;
+                align-items: center;
 
                 @include sm-block {
                     color: #fff;
@@ -233,16 +240,15 @@ nav {
 
 main {
     @include sm-block {
-        padding-top: 70px;
+        padding: 70px 0;
     }
 
     @include xs-block {
-        padding-top: 50px;
+        padding: 50px 0;
     }
 }
 
 .hello {
-    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,6 +270,7 @@ main {
 
         img {
             width: 350px;
+            border-radius: 3px;
         }
 
         @include sm-block {
@@ -295,6 +302,19 @@ main {
         .specs {
             font-size: 24px;
             margin-bottom: 20px;
+        }
+    }
+}
+
+// Fullpage
+
+#fullpage {
+    .section {
+        opacity: .5;
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
         }
     }
 }

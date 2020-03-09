@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="./css/fullpage.min.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/main.css">
 
     <!-- Scripts -->
+    <script src="./js/fullpage.js"></script>
     <script src="./js/script.js"></script>
     <!-- Hey if you are reading this messages -->
 </head>
@@ -32,7 +34,7 @@
                 </div>
                 <div class="nav-contacts">
                     <div class="insta">
-                        <a href="#"><i class="fab fa-instagram"></i> IG</a>
+                        <a href="#"><i class="fab fa-instagram"></i> &nbsp; <span class="hide-sm">instagram</span> <span class="show-sm">IG</span></a>
                     </div>
                 </div>
                 <div class="toggle-btn">
@@ -52,17 +54,26 @@
         </div>
     </nav>
     <main>
-        <div class="hello">
-            <div class="container">
-                <div class="row">
-                    <div class="photo">
-                        <img src="https://placehold.it/800x800" alt="">
+        <div id="fullpage">
+            <div class="section">
+                <div class="hello">
+                    <div class="container">
+                        <div class="row">
+                            <div class="photo">
+                                <img src="./images/me.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h1 class="page-title">Hey, I'm Akmal</h1>
+                                <div class="specs">Front-end developer</div>
+                                <p class="about-me">I work with complex data to tell compelling stories through interactive graphics and dashboards. Interested in visualizing data, learning to code, or working remotely? Find me on Instagram and check out my blog >></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h1 class="page-title">Hey, I'm Akmal</h1>
-                        <div class="specs">Front-end developer</div>
-                        <p class="about-me">I work with complex data to tell compelling stories through interactive graphics and dashboards. Interested in visualizing data, learning to code, or working remotely? Find me on Instagram and check out my blog >></p>
-                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="projects">
+                    
                 </div>
             </div>
         </div>

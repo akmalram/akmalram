@@ -27,16 +27,13 @@ ready(() => {
     }
 });
 
+ready(() => {
+    let fp = new fullpage('#fullpage', {
+        //options here
+        autoScrolling:true,
+    });
 
-
-// const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
-// const fontAwesomeBrandsObserver = new FontFaceObserver('Font Awesome 5 Brands');
-// const gilroyObserver = new FontFaceObserver('Gilroy');
-
-// Promise.all([
-//     fontAwesomeFreeObserver.load(),
-//     fontAwesomeBrandsObserver.load(),
-//     gilroyObserver.load()
-// ]).then(() => {
-//     document.querySelector('html').classList.add('fonts-loaded');
-// });
+    if(window.innerWidth < 768) {
+        fp.destroy();
+    } 
+});
